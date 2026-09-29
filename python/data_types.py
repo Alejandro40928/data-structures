@@ -1,3 +1,6 @@
+from random import randint
+import os
+
 print ("hola")
 personal_info = [
 'Alejandro', 
@@ -25,3 +28,7 @@ conuntries_info = {
     "Code" : 123456
 }
 print(conuntries_info)
+
+
+
+
