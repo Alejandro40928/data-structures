@@ -23,23 +23,57 @@ while True:
         case'1':
             os.system('clear')
             print(":::Registrer form:::")
-            id = input("Ident number: ")
-            firstname = input("Firstname: ")
-            lastname = input("Lastname: ")
-            mobil_phone= input("Mobile Phone: ")
-            email = input("E-mail: ")
-            gender = input("Gender: [M/F/O] ")
+            while True:    
+                id = input("Ident number: ")
+                count = 0
+                i = 0
+                while i < len (ids):
+                     if id == ids[i]:
+                        print("Identification number already exists!")
+                        count += 1
+                        break
+                if count == 0:
+                    break         
+                
+                firstname = input("Firstname: ")
+                lastname = input("Lastname: ")
             
-            ids.append(id)
-            firstnames.append(firstname)
-            lastnames.append(lastname)
-            mobil_phones.append(mobil_phone)
-            emails.append(email)
-            statuses.append(True)
-            genders.append(gender)
-            Create_at.append(data.today())
-            print("user has been Created Succesfully!!")
-            any_Key = input("Press any key to back to Main Menu")
+            while True:
+                mobil_phone= input("Mobile Phone: ")
+                countP = 0
+                e = 0
+                while e < len(phn):
+                    if mobil_phone == phn[e]:
+                        print("Numbre phone already exists!")
+                        countP += 1
+                        break
+                if countP == 0:
+                    break    
+
+            
+            while True:    
+                email = input("E-mail: ")
+                countE = 0
+                a = 0
+                while a < len (emi):
+                    if email == emi[a]:
+                        print ("Identifacation email already exists!")
+                        break
+                if countE == 0:
+                    break
+                
+                gender = input("Gender: [M/F/O] ")
+                
+                ids.append(id)
+                firstnames.append(firstname)
+                lastnames.append(lastname)
+                mobil_phones.append(mobil_phone)
+                emails.append(email)
+                statuses.append(True)
+                genders.append(gender)
+                Create_at.append(data.today())
+                print("user has been Created Succesfully!!")
+                any_Key = input("Press any key to back to Main Menu")
 
         case '2':
             print(":::List alll registererd users:::")
