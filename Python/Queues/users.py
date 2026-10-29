@@ -78,6 +78,26 @@ while True:
         case '2':
             print(":::List alll registererd users:::")
 
+#option 3
+        case '3':
+            os.system('clear')
+            print("Search User ::: \n")
+            id_user= input("Enter identification number to serch: ")
+
+            i = 0 
+            while i < len(ids):
+                if id_user == ids[i]:
+                    j+=1
+                i+=1
+            if j > 0:
+                print(f"Ident users: {ids [i]}")
+                print(f"Full name: {firstname [i]} {lastname [i]}")
+                print(f"Mobile phone: {mobil_phone [i]}")
+                # complete here all fields
+            else:
+                print("Identification number not found")
+
+            key = input("Press any key tp back to main menu: ")            
 
 
             any_Key = input("Press any Key")
